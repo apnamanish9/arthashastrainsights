@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://www.arthashastrainsights.com/">
   <title>Arthashastra Insights | Manish Mishra | SEBI Registered Research Analyst</title>
   <link rel="canonical" href="https://www.arthashastrainsights.com/">
-  <link rel="icon" type="image/png" href="assets/images/Arthashastrainsights_logo.png">
+  <link rel="icon" type="image/png" href="assets/images/Arthashastrainsights_logo1.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,27 +33,29 @@
   <!-- ══════════════════════════════════════
        STICKY NAVBAR
   ══════════════════════════════════════ -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="Arthashastra Insights Home">
-        <img src="assets/images/Arthashastrainsights_logo.png" alt="Arthashastra Insights Logo" height="70" width="auto">
+  <header class="site-header" id="navbar">
+    <nav class="navbar">
+      <a href="#home" class="navbar-brand">
+        <img src="assets/images/Arthashastrainsights_logo1.png" alt="Arthashastra Insights Logo" class="nav-logo">
       </a>
-      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#training">Training</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="grievance-redressal.html">Grievance</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-        <a href="https://www.youtube.com/@Arthashastrainsights" target="_blank" rel="noopener noreferrer" class="nav-youtube" title="Watch on YouTube" aria-label="Watch on YouTube">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#f5a623" style="display:block;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-      </nav>
-      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
-    </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#training" class="nav-link">Training</a></li>
+        <li><a href="disclaimer.html" class="nav-link">Disclaimer</a></li>
+        <li><a href="grievance-redressal.html" class="nav-link">Grievance</a></li>
+        <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+        <li>
+          <a href="https://www.youtube.com/@Arthashastrainsights" target="_blank" rel="noopener noreferrer" class="nav-yt" aria-label="YouTube Channel">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#f5a623"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <div class="page-start">
@@ -497,11 +499,13 @@
       <div class="footer-main">
         <div class="container footer-grid">
           <div class="footer-brand">
-            <a href="#home" class="logo" aria-label="Arthashastra Insights Home">
-              <img src="assets/images/Arthashastrainsights_logo.png" alt="Arthashastra Insights" height="55" width="auto">
+            <a href="#home">
+              <img src="assets/images/Arthashastrainsights_logo1.png" alt="Arthashastra Insights" class="footer-logo">
             </a>
-            <p class="mt-2">A brand by Manish Mishra</p>
-            <p class="sub" style="margin-top:.375rem;">Independent equity research for informed investors.</p>
+            <p class="footer-brand-name">Arthashastra Insights</p>
+            <p class="footer-brand-tagline">Insights from SEBI Registered Research Analyst</p>
+            <p class="footer-brand-sub">A brand by Manish Mishra</p>
+            <p class="footer-brand-sub">Independent equity research for informed investors.</p>
           </div>
           <div class="footer-col">
             <h5>Quick Links</h5>
