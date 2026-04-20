@@ -40,9 +40,9 @@
 }
 
 /* ── Reset ── */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:14px;-webkit-text-size-adjust:100%}
-body{font-family:var(--font-sans);background:var(--navy);color:var(--white);font-size:14px;line-height:1.75;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{scroll-behavior:smooth;font-size:14px;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{font-family:var(--font-sans);background:var(--navy);color:var(--white);font-size:14px;line-height:1.75;overflow-x:hidden;width:100%;max-width:100vw}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 ul,ol{list-style:none}
@@ -152,8 +152,9 @@ p{font-size:0.8rem;line-height:1.8}
   justify-content:space-between;height:100%;
   padding-left:0;padding-right:0
 }
-.navbar{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 1.5rem;height:100%}
-.navbar-brand{display:flex;align-items:center;gap:14px;text-decoration:none;flex-shrink:0}
+.site-header,header,nav{width:100%;max-width:100%}
+.navbar{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 1.5rem;height:100%;width:100%}
+.navbar-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;max-width:65%;overflow:hidden}
 .nav-logo{height:72px;width:auto;object-fit:contain;flex-shrink:0}
 .brand-text{display:flex;flex-direction:column}
 .brand-name{font-size:28px;font-weight:700;color:#ffffff;line-height:1.2;font-family:'Playfair Display',serif}
@@ -894,3 +895,97 @@ p{font-size:0.8rem;line-height:1.8}
   text-transform:uppercase;color:#fca5a5;margin-bottom:.5rem
 }
 .risk-box p{font-size:0.6875rem;color:rgba(255,200,200,.8);line-height:1.75;margin:0}
+
+/* ═════════════════════════════════════════
+   MOBILE RESPONSIVENESS FIXES
+═════════════════════════════════════════ */
+
+/* Issues 3+4 — Navbar mobile */
+@media(max-width:768px){
+  .nav-logo{height:50px !important;width:auto}
+  .brand-name,.logo-name{font-size:16px !important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand-tagline,.logo-tagline{font-size:9px !important;white-space:nowrap}
+  .nav-links{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0a0f2e;flex-direction:column;align-items:center;justify-content:center;gap:24px;z-index:9998;list-style:none;padding:0;margin:0}
+  .nav-links.active{display:flex}
+  .nav-links a{font-size:18px !important;color:white;text-decoration:none;padding:8px 0}
+  .hamburger{display:flex !important;flex-direction:column;gap:5px;cursor:pointer;z-index:9999;background:none;border:none;padding:4px}
+  .hamburger span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all 0.3s}
+}
+@media(min-width:769px){
+  .hamburger{display:none !important}
+  .nav-links{display:flex !important}
+}
+
+/* Issue 5 — Hero mobile */
+@media(max-width:768px){
+  .hero,#home{min-height:100svh;padding:80px 16px 40px}
+  .hero h1,.hero-title{font-size:clamp(1.6rem,6vw,2.5rem) !important;line-height:1.3}
+  .hero p,.hero-subtitle{font-size:0.95rem !important;line-height:1.7}
+  .cta-buttons{flex-direction:column;gap:12px;align-items:center}
+  .cta-buttons a,.cta-buttons button{width:100%;max-width:280px;text-align:center}
+  .slide-quote{bottom:70px;padding:10px 16px;font-size:0.85rem !important}
+}
+
+/* Issue 6 — Sections padding mobile */
+@media(max-width:768px){
+  section{padding:50px 16px !important}
+  .container{padding:0 16px !important;width:100%;max-width:100%}
+  h2{font-size:clamp(1.4rem,5vw,2rem) !important}
+  h3{font-size:clamp(1.1rem,4vw,1.5rem) !important}
+}
+
+/* Issue 7 — Cards mobile */
+@media(max-width:768px){
+  .services-grid,.courses-grid,.vm-grid,.why-grid{grid-template-columns:1fr !important;gap:20px !important}
+  .service-card,.course-card{min-height:auto !important;padding:24px 16px !important}
+}
+
+/* Issue 8 — Tables mobile */
+@media(max-width:768px){
+  .grievance-table-section .table-wrap{overflow-x:auto !important;-webkit-overflow-scrolling:touch}
+  .grievance-table-section table{min-width:500px}
+  .grievance-table-section th,.grievance-table-section td{font-size:11px !important;padding:8px 6px !important}
+}
+
+/* Issue 9 — Footer mobile */
+@media(max-width:768px){
+  footer .footer-grid,footer .footer-columns{grid-template-columns:1fr !important;gap:32px !important}
+  footer{padding:40px 16px 20px !important}
+  .footer-disclosure{font-size:0.75rem !important;line-height:1.6}
+}
+
+/* Issue 10 — WhatsApp and back to top mobile */
+@media(max-width:768px){
+  .whatsapp-float{bottom:16px !important;right:16px !important;width:50px !important;height:50px !important}
+  .back-to-top{bottom:76px !important;right:16px !important;width:40px !important;height:40px !important}
+}
+
+/* Issue 11 — Compliance ticker mobile */
+@media(max-width:768px){
+  .ticker-wrap,.compliance-ticker{font-size:0.75rem !important;padding:6px 0 !important}
+}
+
+/* Issue 12 — TradingView mobile */
+@media(max-width:768px){
+  .tradingview-widget-container{width:100% !important;overflow:hidden}
+}
+
+/* Issue 13 — Contact form mobile */
+@media(max-width:768px){
+  .contact-grid,.contact-layout{grid-template-columns:1fr !important}
+  .form-input,.form-select,.form-textarea{width:100% !important;font-size:16px !important}
+}
+
+/* Issue 14 — About section mobile */
+@media(max-width:768px){
+  .about-grid,.about-layout{grid-template-columns:1fr !important;text-align:center}
+  .about-photo,.photo-placeholder{margin:0 auto 24px !important}
+  .credentials-grid{grid-template-columns:repeat(2,1fr) !important}
+}
+
+/* Issue 15 — Terms of use mobile */
+@media(max-width:768px){
+  .terms-block{padding:16px 0 !important}
+  .terms-block h3{font-size:0.95rem !important}
+  .terms-block p,.terms-block li{font-size:0.85rem !important}
+}

@@ -53,17 +53,17 @@
      3. Mobile Navigation
   ──────────────────────────────────────── */
   const hamburger = $('.hamburger');
-  const mainNav   = $('.main-nav');
-  if (hamburger && mainNav) {
+  const navLinks  = $('#nav-links');
+  if (hamburger && navLinks) {
     on(hamburger, 'click', () => {
-      const open = mainNav.classList.toggle('open');
+      const open = navLinks.classList.toggle('active');
       hamburger.classList.toggle('open', open);
       hamburger.setAttribute('aria-expanded', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
-    $$('a', mainNav).forEach(a => {
+    $$('a', navLinks).forEach(a => {
       on(a, 'click', () => {
-        mainNav.classList.remove('open');
+        navLinks.classList.remove('active');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
@@ -71,7 +71,7 @@
     });
     on(document, 'click', e => {
       if (header && !header.contains(e.target) && !hamburger.contains(e.target)) {
-        mainNav.classList.remove('open');
+        navLinks.classList.remove('active');
         hamburger.classList.remove('open');
         document.body.style.overflow = '';
       }
@@ -82,7 +82,7 @@
      4. Active Nav Link on Scroll
          Uses IntersectionObserver on sections
   ──────────────────────────────────────── */
-  const navLinks = $$('.main-nav a[href^="#"]');
+  const navLinks = $$('.nav-links a[href^="#"]');
   const sections = $$('section[id]');
 
   if (navLinks.length && sections.length) {
