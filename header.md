@@ -1,49 +1,53 @@
-You are working on a website UI.
+You are troubleshooting a Cloudflare Pages deployment issue.
 
-Task: Reduce excessive empty space inside content cards/boxes and make the layout more compact and content-driven.
+Problem:
+- The latest deployed site works correctly on:
+  → https://20904670.arthashastrainsights.pages.dev
+- But the custom domain:
+  → https://arthashastrainsights.com
+  does NOT reflect the same updated content.
 
 Context:
-- Several sections (e.g., Swing Trading Research, Momentum Trading Research, Masterclass, Course cards) have large containers with relatively little text.
-- This results in oversized boxes, too much padding, and wasted screen space.
-- The goal is to make the UI lean, tighter, and more professional without harming readability.
+- Project is hosted on Cloudflare Pages.
+- Multiple deployments exist and latest one is active.
+- Domain is already added to the Pages project.
 
-Requirements:
-1. Reduce unnecessary height in cards/containers:
-   - Remove any fixed heights (height, min-height) unless absolutely required.
-   - Let height be determined by content.
+Tasks:
 
-2. Optimize spacing:
-   - Reduce excessive padding (especially top/bottom).
-   - Reduce large margins between elements inside cards.
-   - Keep spacing consistent and balanced.
+1. Verify domain connection:
+   - Ensure arthashastrainsights.com is correctly connected to the latest production branch (main).
+   - Confirm it's set as a **Production domain**, not preview.
 
-3. Improve layout behavior:
-   - Ensure text wraps naturally without forcing large empty areas.
-   - Align icons, headings, and text more tightly.
-   - Avoid large vertical gaps between sections like HOLDING PERIOD, INSTRUMENTS, BASIS, etc.
+2. Check DNS settings in Cloudflare:
+   - Ensure the domain has:
+     Type: CNAME  
+     Name: @  
+     Target: arthashastrainsights.pages.dev  
+     Proxy: ON (orange cloud)
+   - Also verify www (if used) points correctly.
 
-4. Image handling:
-   - If cards have background images, ensure they don’t force extra height.
-   - Use `background-size: cover` and control height via content, not image.
-   - Optionally reduce image overlay padding.
+3. Clear caching issues:
+   - Purge Cloudflare cache completely.
+   - Disable any aggressive caching/page rules temporarily.
+   - Ensure no stale content is being served.
 
-5. Responsiveness:
-   - Maintain good readability on mobile and desktop.
-   - Ensure cards don’t look cramped—just remove excess space, not necessary breathing room.
+4. Check for build mismatch:
+   - Confirm that the latest deployment is marked as "Production".
+   - Ensure no older deployment is pinned to the custom domain.
 
-6. Consistency:
-   - Apply these improvements across all similar components (research cards, course cards, etc.).
-   - Maintain visual hierarchy (titles still prominent, labels readable).
+5. SSL/TLS:
+   - Verify SSL mode is "Full" or "Full (strict)".
+   - Ensure no redirect loops or HTTPS misconfigurations.
 
-7. Do NOT:
-   - Break layout grid (2-column structure should remain).
-   - Remove content.
-   - Make UI feel crowded or cluttered.
+6. Redirect rules:
+   - Check if any redirect/page rule is forcing traffic to an older deployment or different URL.
+
+7. Final validation:
+   - After fixes, confirm both URLs show identical content:
+     - pages.dev URL
+     - custom domain
 
 Output:
-- Show before → after changes (CSS/HTML/Tailwind).
-- Highlight exactly what spacing, height, or layout rules were removed or adjusted.
-- Provide final optimized code snippets.
-
-Goal:
-A tighter, cleaner UI where each card fits its content naturally and avoids wasted vertical space.
+- Step-by-step fixes applied
+- Any misconfiguration found
+- Final working DNS + Pages configuration

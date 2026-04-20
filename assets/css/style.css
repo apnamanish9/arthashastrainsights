@@ -778,6 +778,33 @@ p{font-size:0.8rem;line-height:1.8}
 }
 
 /* ═════════════════════════════════════════
+   GRIEVANCE TABLES
+═════════════════════════════════════════ */
+.grievance-tables{margin-top:40px}
+.grievance-table-section{margin-bottom:40px}
+.grievance-table-section h3{color:#f5a623;font-size:1.2rem;margin-bottom:8px;font-weight:600}
+.grievance-table-section h4{color:#ffffff;font-size:1rem;margin-bottom:12px;opacity:0.9}
+.grievance-table-section .table-wrap{overflow-x:auto;border-radius:8px;border:1px solid rgba(255,255,255,0.1)}
+.grievance-table-section table{width:100%;border-collapse:collapse;font-size:13px;min-width:600px}
+.grievance-table-section thead tr{background:#0a0f2e}
+.grievance-table-section thead th{color:#f5a623;padding:12px 10px;text-align:center;font-weight:600;font-size:12px;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.1)}
+.grievance-table-section tbody tr:nth-child(even){background:rgba(255,255,255,0.03)}
+.grievance-table-section tbody tr:nth-child(odd){background:rgba(255,255,255,0.07)}
+.grievance-table-section tbody td{color:#e2e8f0;padding:10px;text-align:center;border:1px solid rgba(255,255,255,0.08);font-size:13px}
+.grievance-table-section tbody tr:last-child td{font-weight:700;color:#ffffff;background:rgba(245,166,35,0.1)}
+.grievance-table-section .table-footnote{font-size:11px;color:rgba(255,255,255,0.6);margin-top:8px;line-height:1.6;font-style:italic}
+
+/* ═════════════════════════════════════════
+   TERMS OF USE PAGE
+═════════════════════════════════════════ */
+.terms-block{margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.terms-block:last-of-type{border-bottom:none}
+.terms-block h3{color:#f5a623;font-size:1.05rem;font-weight:600;margin-bottom:12px;letter-spacing:0.3px}
+.terms-block p{color:#cbd5e1;font-size:0.92rem;line-height:1.85;margin-bottom:10px}
+.terms-block ul{color:#cbd5e1;font-size:0.92rem;line-height:1.85;padding-left:22px;margin:10px 0}
+.terms-block ul li{margin-bottom:8px}
+
+/* ═════════════════════════════════════════
    LEGAL / INNER PAGES
 ═════════════════════════════════════════ */
 .page-hero{
@@ -791,7 +818,7 @@ p{font-size:0.8rem;line-height:1.8}
 }
 .page-hero p{
   color:var(--text-light);font-size:0.75rem;
-  max-width:620px;margin:0
+  max-width:620px;margin:0 auto;text-align:center
 }
 .breadcrumb{
   display:flex;align-items:center;gap:.5rem;
@@ -844,6 +871,16 @@ p{font-size:0.8rem;line-height:1.8}
   padding:1.125rem 1.375rem;margin-bottom:1.75rem
 }
 .info-box p{font-size:0.6875rem;color:var(--text-light);line-height:1.75;margin:0}
+.info-box[style*="background:#fff"] p,
+.info-box[style*="background:#fff"] *,
+.disclaimer-highlight-box,
+.disclaimer-highlight-box *,
+.disclaimer-note,
+.disclaimer-note *,
+.important-note,
+.important-note *,
+.disclaimer-box,
+.disclaimer-box *{color:#1a1a2e !important}
 
 .risk-box{
   background:rgba(239,68,68,.07);
