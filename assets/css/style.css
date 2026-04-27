@@ -108,6 +108,8 @@ p{font-size:0.8rem;line-height:1.8}
 .btn-lg{padding:.875rem 2rem;font-size:0.75rem}
 .btn-sm{padding:.5rem 1.125rem;font-size:0.6875rem}
 .btn-danger{background:var(--danger);color:#fff;border-color:var(--danger)}
+.btn-primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn-primary:hover{background:var(--gold-light);border-color:var(--gold-light)}
 
 /* ═════════════════════════════════════════
    COMPLIANCE TICKER

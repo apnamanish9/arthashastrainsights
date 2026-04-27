@@ -82,12 +82,12 @@
      4. Active Nav Link on Scroll
          Uses IntersectionObserver on sections
   ──────────────────────────────────────── */
-  const navLinks = $$('.nav-links a[href^="#"]');
+  const navAnchors = $$('.nav-links a[href^="#"]');
   const sections = $$('section[id]');
 
-  if (navLinks.length && sections.length) {
+  if (navAnchors.length && sections.length) {
     const setActive = id => {
-      navLinks.forEach(a => {
+      navAnchors.forEach(a => {
         const href = a.getAttribute('href');
         a.classList.toggle('active', href === '#' + id);
       });
