@@ -6,69 +6,33 @@
 
   <!-- Arthashastra Insights Sitemap -->
   <!-- SEBI Registered Research Analyst | Reg. No. INH000024620 -->
-  <!-- Update lastmod dates and domain before deploying -->
 
   <url>
     <loc>https://www.arthashastrainsights.com/</loc>
-    <lastmod>2025-04-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.arthashastrainsights.com/about.html</loc>
-    <lastmod>2025-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.arthashastrainsights.com/services.html</loc>
-    <lastmod>2025-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://www.arthashastrainsights.com/stock-picks.html</loc>
-    <lastmod>2025-04-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
     <loc>https://www.arthashastrainsights.com/disclaimer.html</loc>
-    <lastmod>2025-04-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.arthashastrainsights.com/grievance-redressal.html</loc>
-    <lastmod>2025-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.arthashastrainsights.com/investor-charter.html</loc>
-    <lastmod>2025-04-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.arthashastrainsights.com/terms-of-use.html</loc>
-    <lastmod>2025-04-20</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://www.arthashastrainsights.com/contact.html</loc>
-    <lastmod>2025-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>
